@@ -13,6 +13,12 @@ This project is a Railway Management System built using Spring Boot. It includes
 - Retrieve specific booking details
 - SwaggerUI for quick and effecient api testing
 
+
+## Video Demonstration
+
+[![Watch the video](https://img.youtube.com/vi/S-ffdtP5Owg/0.jpg)](https://youtu.be/S-ffdtP5Owg)
+
+Click on the image above to watch the demonstration video on YouTube.
 ## Prerequisites
 
 To run this project locally, you will need:
