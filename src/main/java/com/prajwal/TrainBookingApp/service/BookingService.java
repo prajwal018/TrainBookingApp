@@ -40,13 +40,17 @@ public class BookingService {
                 Booking booking = new Booking();
                 booking.setTrain(train);
                 booking.setUser(userRepository.findById(bookingRequest.getUserid()).get());
-                booking.setSeatNumber(train.getTotalSeats() - train.getAvailableSeats());
+                int[] seats = new int[bookingRequest.getSeats()];
+                for (int j=0 , i = bookingRequest.getSeats(); i > 0 ; i--,j++) {
+                seats[j] = (train.getAvailableSeats()-i);
+                }
+                booking.setSeatNumber(seats);
                 booking.setBookingTime(LocalDateTime.now());
                 bookingRepository.save(booking);
 
                 return SeatResponse.builder()
                         .trainName(booking.getTrain().getTrainName())
-                        .seatsBooked(booking.getSeatNumber())
+                        .seatsBooked(seats.length)
                         .trainNumber(booking.getTrain().getId()).build();
             } else {
                 throw new RuntimeException("No seats available");
@@ -67,7 +71,9 @@ public class BookingService {
                     .bookedBy(booking.getUser().getUsername())
                     .bookingTime(booking.getBookingTime())
                     .destination(booking.getTrain().getDestination())
-                    .seatsBooked(booking.getSeatNumber()).build();
+                    .seatNumber(booking.getSeatNumber())
+                    .seatsBooked(booking.getSeatNumber().length).build();
+
         } else {
             throw new RuntimeException("No seats available");
         }

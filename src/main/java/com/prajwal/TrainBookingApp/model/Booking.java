@@ -18,7 +18,7 @@ public class Booking {
     @ManyToOne
     private Users user;
 
-    private int seatNumber;
+    private int[] seatNumber;
     private LocalDateTime bookingTime;
 
 }

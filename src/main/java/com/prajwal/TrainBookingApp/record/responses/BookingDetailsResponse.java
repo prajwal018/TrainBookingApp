@@ -20,6 +20,7 @@ public class BookingDetailsResponse {
     private String source;
     private String destination;
     private int seatsBooked;
+    private int[] seatNumber;
     private String bookedBy;
     private LocalDateTime bookingTime;
 
