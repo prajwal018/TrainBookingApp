@@ -11,6 +11,7 @@ This project is a Railway Management System built using Spring Boot. It includes
 - Train seat availability based on source and destination
 - Seat booking for trains
 - Retrieve specific booking details
+- SwaggerUI for quick and effecient api testing
 
 ## Prerequisites
 
@@ -63,6 +64,8 @@ mvn spring-boot:run
 ```
 
 The application will start at `http://localhost:8080`.
+
+Additionally use `http://localhost:8080/swagger-ui/index.html` to test endpoints of the application as shown in video.
 
 ## Endpoints
 
