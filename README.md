@@ -33,8 +33,8 @@ To run this project locally, you will need:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/railway-management-system.git
-cd railway-management-system
+git clone https://github.com/prajwal018/TrainBookingApp.git
+cd TrainBookingApp
 ```
 
 ### 2. Configure the database
@@ -87,7 +87,7 @@ Additionally use `http://localhost:8080/swagger-ui/index.html` to test endpoints
     "lastname":"kuchewar",
     "username":"prajwal",
     "password":"prajwal",
-    "role":"ADMIN"
+    "role":"ADMIN"  // Can be USER also
 }
 ```
 
@@ -117,6 +117,7 @@ The response will contain a JWT token which you will use to authenticate further
 ```plaintext
 x-api-key: $2a$10$W32gmZeeSxw/AcfL0wzlyOX31fNuIryZ.nuQ9/ycTvE4LZ8leMyty
 ```
+changes when you register for first time.
 
 **Request Body:**
 
